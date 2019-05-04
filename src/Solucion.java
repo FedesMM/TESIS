@@ -69,6 +69,7 @@ public class Solucion {
     //Restriccion 3 usos distintos, cuantos productores no la cumplen.
     RestriccionUsosDistintos restriccionUsosDistintos;
 
+    //TODO: Parametriziar el aumento aumento como una variable de decision
     public static float actualizarPesoFosforo(Solucion solucionOriginal, Solucion solucion, float pesoFosforo) {
 
         if (solucionOriginal.fosforo<=solucion.fosforo){
@@ -78,6 +79,7 @@ public class Solucion {
             return (pesoFosforo/1.1F);
         }
     }
+    //TODO: Parametriziar el aumento aumento como una variable de decision
     public static float actualizarPesoProduccion(Solucion solucionOriginal, Solucion solucion, float pesoProduccion) {
 
         if (-solucionOriginal.restriccionProductividadMinimaEstacion.maximoDesviacion<=-solucion.restriccionProductividadMinimaEstacion.maximoDesviacion){
@@ -87,6 +89,7 @@ public class Solucion {
             return (pesoProduccion/1.1F);
         }
     }
+    //TODO: Parametriziar el aumento aumento como una variable de decision
     public static float actualizarPesoCantUsos(Solucion solucionOriginal, Solucion solucion, float pesoCantUsos) {
 
         if (solucionOriginal.restriccionUsosDistintos.cantIncumplimientos<=solucion.restriccionUsosDistintos.cantIncumplimientos){
@@ -122,26 +125,6 @@ public class Solucion {
         return genoma;
     }
 
-    /*DEPRECATED
-    //Restricciones de fosforo anual
-    boolean cumpleRestriccionFAnual;
-    int  indiceDesviacionMaximaFosforoAnual; //Indicie en que se encuentra la Maxima superacion del tope de fosforo
-    float  desviacionMediaFosforo; //Superacion promedia del tope de fosforo
-    float [] fosforoAnual;
-    float [][] fosforoAnualPorProductor;
-
-
-    //Restricciones Productor
-    boolean cumpleRestriccionProductores;
-    int[]   indiceDesviacionesMaximaProductores; //Indicie en que se encuentra la Maxima superacion del tope de fosforo
-    float[]  desviacionesMediaProductores; //Superacion promedia del tope de fosforo
-
-    //Restriccion cantUsos
-    int [][] cantUsosProductor;
-    int [] cantUsosDistin
-    tosProductor;
-    */
-
     public Solucion clone(){
         Solucion clon = new Solucion ();
         clon.fosforo=this.fosforo;
@@ -153,7 +136,7 @@ public class Solucion {
         clon.restriccionUsosDistintos=this.restriccionUsosDistintos.clone();
         return clon;
     }
-    //float produccionAcumulada;
+
     public void imprimirFuncionObjetivo(){
         System.out.println("Funcion Objetivo: "+this.evaluarFuncionObjetivo());
         System.out.println("\tFosforo modulado: "+Constantes.pesoIncumplimientoFosforo * (this.fosforo /(Constantes.maximoIncumplimientoFosforo*this.areaTotal)));
@@ -363,6 +346,7 @@ public class Solucion {
         return solucion;
     }
 
+    //TODO: SEGUIR DE ACA!!!
     public static Solucion firstImprove(Solucion solucion, float pesoFosforo, float pesoProductividad, float pesoCantUsos, boolean distanciaAlRio){
         Solucion respaldoSolucion=solucion.clone();
         int pixelRandom;

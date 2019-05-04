@@ -37,8 +37,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="4065">
+              <caret line="801" column="32" selection-start-line="801" selection-start-column="32" selection-end-line="801" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,10 +49,42 @@
       <file leaf-file-name="Uso.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Uso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3963">
-              <caret line="638" column="11" selection-start-line="638" selection-start-column="11" selection-end-line="641" selection-end-column="32" />
+            <state relative-caret-position="285">
+              <caret line="403" column="33" lean-forward="true" selection-start-line="403" selection-start-column="33" selection-end-line="403" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Uso#0;class#Uso#0" />
+                <element signature="method#siguienteUsoUniforme#0;class#Uso#0" />
+                <element signature="e#1147#1207#0" />
+                <element signature="method#siguienteUsoRuletaFosforo#0;class#Uso#0" />
+                <element signature="e#2038#2098#0" />
+                <element signature="method#siguienteUsoRuletaProduccion#0;class#Uso#0" />
+                <element signature="method#siguienteUsoRuletaFosforoCumpleCantUsos#0;class#Uso#0" />
+                <element signature="method#siguienteUsoRuletaProduccionCumpleCantUsos#0;class#Uso#0" />
+                <element signature="method#cargarUsosDesdeArchivos#0;class#Uso#0" />
+                <element signature="method#cargarUsoDesdeArchivo#0;class#Uso#0" />
+                <element signature="e#12935#12982#0" />
+                <element signature="e#13496#13544#0" />
+                <element signature="e#14792#14836#0" />
+                <element signature="e#16239#16283#0" />
+                <element signature="e#18971#18999#0" />
+                <element signature="e#19053#19068#0" />
+                <element signature="method#imprimirUso#0;class#Uso#0" />
+                <element signature="method#imprimirUsos#0;class#Uso#0" />
+                <element signature="method#crearArchivosUsos#0;class#Uso#0" />
+                <element signature="method#crearArchivo#0;class#Uso#0" />
+                <element signature="e#22002#22049#0" />
+                <element signature="method#getEstacionUso#0;class#Uso#0" />
+                <element signature="method#indiceUso#0;class#Uso#0" />
+                <element signature="method#usoYDuracion#0;class#Uso#0" />
+                <element signature="method#obtenerUsoBase#0;class#Uso#0" />
+                <element signature="method#obtenerUsoReservado#0;class#Uso#0" />
+                <element signature="method#cargarUsos#0;class#Uso#0" />
+                <element signature="e#37758#37781#0" />
+                <element signature="e#43214#43241#0" />
+                <element signature="method#cargarUsosTest#0;class#Uso#0" />
+                <element signature="e#44419#44444#0" />
+                <element signature="method#tengoSiguiente#0;class#Uso#0" />
+                <element signature="method#imprimirSiguientesUsos#0;class#Uso#0" />
               </folding>
             </state>
           </provider>
@@ -58,10 +93,35 @@
       <file leaf-file-name="Pixel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pixel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-390">
-              <caret line="148" column="44" selection-start-line="148" selection-start-column="44" selection-end-line="148" selection-end-column="44" />
+            <state relative-caret-position="345">
+              <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#399#429#0" />
+                <element signature="method#Pixel#0;class#Pixel#0" />
+                <element signature="method#imprimirPixel#0;class#Pixel#0" />
+                <element signature="method#imprimirPixeles#0;class#Pixel#0" />
+                <element signature="method#cargarPixelesTest#0;class#Pixel#0" />
+                <element signature="method#cargarPixeles#0;class#Pixel#0" />
+                <element signature="e#2209#2346#0" />
+                <element signature="e#2787#2819#0" />
+                <element signature="e#3230#3260#0" />
+                <element signature="e#3466#3513#0" />
+                <element signature="e#5891#5920#0" />
+                <element signature="e#6596#6624#0" />
+                <element signature="method#cargarPixelesDeProductor#0;class#Pixel#0" />
+                <element signature="e#6798#6935#0" />
+                <element signature="e#7327#7359#0" />
+                <element signature="e#7770#7800#0" />
+                <element signature="e#8006#8053#0" />
+                <element signature="e#8222#8241#0" />
+                <element signature="e#9045#9073#0" />
+                <element signature="e#9654#9684#0" />
+                <element signature="e#9890#9937#0" />
+                <element signature="e#12302#12331#0" />
+                <element signature="e#13007#13035#0" />
+                <element signature="method#contarLineas#0;class#Pixel#0" />
+                <element signature="e#13603#13633#0" />
+                <element signature="e#14290#14318#0" />
               </folding>
             </state>
           </provider>
@@ -70,8 +130,8 @@
       <file leaf-file-name="Constantes.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Constantes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="465">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -79,8 +139,122 @@
       <file leaf-file-name="Solucion.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solucion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="259" column="36" lean-forward="true" selection-start-line="259" selection-start-column="36" selection-end-line="259" selection-end-column="36" />
+            <state relative-caret-position="159">
+              <caret line="348" column="28" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
+              <folding>
+                <element signature="class#RestriccionProductividadProductores#0" />
+                <element signature="method#RestriccionProductividadProductores#0;class#RestriccionProductividadProductores#0" />
+                <element signature="method#clone#0;class#RestriccionProductividadProductores#0" />
+                <element signature="class#RestriccionUsosDistintos#0" />
+                <element signature="method#RestriccionUsosDistintos#0;class#RestriccionUsosDistintos#0" />
+                <element signature="method#clone#0;class#RestriccionUsosDistintos#0" />
+                <element signature="e#2589#2963#0" />
+                <element signature="e#2968#3452#0" />
+                <element signature="e#3457#3909#0" />
+                <element signature="e#3915#4437#0" />
+                <element signature="e#4443#4878#0" />
+                <element signature="e#5627#6188#0" />
+                <element signature="e#6193#6970#0" />
+                <element signature="e#6975#7793#0" />
+                <element signature="e#7800#8352#0" />
+                <element signature="e#8357#8939#0" />
+                <element signature="e#8945#9116#0" />
+                <element signature="e#9122#9325#0" />
+                <element signature="e#9331#9508#0" />
+                <element signature="e#9514#10397#0" />
+                <element signature="e#10404#11081#0" />
+                <element signature="e#11087#11482#0" />
+                <element signature="e#11488#12023#0" />
+                <element signature="e#12030#12578#0" />
+                <element signature="e#12584#13285#0" />
+                <element signature="e#13291#13687#0" />
+                <element signature="e#13692#14142#0" />
+                <element signature="e#14148#15142#0" />
+                <element signature="e#15150#16046#0" />
+                <element signature="e#16053#16371#0" />
+                <element signature="e#16377#16711#0" />
+                <element signature="e#16717#17883#0" />
+                <element signature="e#17890#18028#0" />
+                <element signature="e#18034#24543#0" />
+                <element signature="e#18258#18312#0" />
+                <element signature="e#18520#18601#0" />
+                <element signature="e#20910#21056#0" />
+                <element signature="e#21676#21720#0" />
+                <element signature="e#21893#22090#0" />
+                <element signature="e#22999#23033#0" />
+                <element signature="e#24549#31333#0" />
+                <element signature="e#24886#24940#0" />
+                <element signature="e#25148#25229#0" />
+                <element signature="e#27403#27549#0" />
+                <element signature="e#28115#28159#0" />
+                <element signature="e#28478#28675#0" />
+                <element signature="e#29584#29618#0" />
+                <element signature="e#31339#34814#0" />
+                <element signature="e#31406#31498#0" />
+                <element signature="e#31798#31852#0" />
+                <element signature="e#32060#32141#0" />
+                <element signature="e#32812#32856#0" />
+                <element signature="e#33048#33109#0" />
+                <element signature="e#33396#33593#0" />
+                <element signature="e#34820#38353#0" />
+                <element signature="e#34909#35001#0" />
+                <element signature="e#35197#35251#0" />
+                <element signature="e#36598#36659#0" />
+                <element signature="e#36934#37131#0" />
+                <element signature="e#38362#40129#0" />
+                <element signature="e#38408#38469#0" />
+                <element signature="e#40135#42320#0" />
+                <element signature="e#42326#45626#0" />
+                <element signature="e#45632#50813#0" />
+                <element signature="e#45972#46068#0" />
+                <element signature="e#47461#47495#0" />
+                <element signature="e#50820#53337#0" />
+                <element signature="e#52156#52337#0" />
+                <element signature="e#53343#55256#0" />
+                <element signature="e#55262#57225#0" />
+                <element signature="e#57231#57776#0" />
+                <element signature="e#57464#57511#0" />
+                <element signature="e#57782#59896#0" />
+                <element signature="e#59902#61669#0" />
+                <element signature="e#61675#63348#0" />
+                <element signature="e#63353#65027#0" />
+                <element signature="e#65032#70838#0" />
+                <element signature="e#65719#65810#0" />
+                <element signature="e#66545#66622#0" />
+                <element signature="e#67397#67488#0" />
+                <element signature="e#68102#68112#0" />
+                <element signature="e#68692#68735#0" />
+                <element signature="e#69567#69610#0" />
+                <element signature="e#70599#70713#0" />
+                <element signature="e#70844#71570#0" />
+                <element signature="e#71576#77330#0" />
+                <element signature="e#72098#72175#0" />
+                <element signature="e#72322#72356#0" />
+                <element signature="e#73242#73262#0" />
+                <element signature="e#77073#77156#0" />
+                <element signature="e#77336#79854#0" />
+                <element signature="e#77536#77616#0" />
+                <element signature="e#78255#78307#0" />
+                <element signature="e#78496#78596#0" />
+                <element signature="e#79861#82299#0" />
+                <element signature="e#79946#80006#0" />
+                <element signature="e#80738#80856#0" />
+                <element signature="e#81963#82079#0" />
+                <element signature="e#82306#85550#0" />
+                <element signature="e#82713#82800#0" />
+                <element signature="e#84190#84244#0" />
+                <element signature="e#85556#91196#0" />
+                <element signature="e#87101#87121#0" />
+                <element signature="e#90939#91022#0" />
+                <element signature="e#91202#91368#0" />
+                <element signature="e#91374#92197#0" />
+                <element signature="e#92203#92485#0" />
+                <element signature="e#92490#93027#0" />
+                <element signature="e#93033#93728#0" />
+                <element signature="e#93307#93354#0" />
+                <element signature="e#93734#95067#0" />
+                <element signature="e#95073#96371#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,7 +262,7 @@
       <file leaf-file-name="Productor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Productor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-263">
+            <state relative-caret-position="240">
               <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
             </state>
           </provider>
@@ -170,13 +344,14 @@
         <option value="$PROJECT_DIR$/src/Restricciones.java" />
         <option value="$PROJECT_DIR$/opt_usos_v1.dat" />
         <option value="$PROJECT_DIR$/opt_usos_v1.mod" />
-        <option value="$PROJECT_DIR$/src/Uso.java" />
         <option value="$PROJECT_DIR$/src/Productor.java" />
-        <option value="$PROJECT_DIR$/src/Constantes.java" />
         <option value="$PROJECT_DIR$/Instancias/IntanciaPrueba.in" />
-        <option value="$PROJECT_DIR$/src/Pixel.java" />
-        <option value="$PROJECT_DIR$/src/Solucion.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Pruebamain.form" />
+        <option value="$PROJECT_DIR$/src/Uso.java" />
+        <option value="$PROJECT_DIR$/src/Pixel.java" />
+        <option value="$PROJECT_DIR$/src/Constantes.java" />
+        <option value="$PROJECT_DIR$/src/Solucion.java" />
       </list>
     </option>
   </component>
@@ -186,7 +361,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="927" />
@@ -321,7 +496,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="7" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -331,18 +506,18 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5013835" side_tool="true" weight="0.19466074" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32946378" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" weight="0.3297414" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4991708" weight="0.26362625" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4986165" weight="0.19466074" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" weight="0.3297414" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4986165" visible="true" weight="0.19466074" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4978038" visible="true" weight="0.2429441" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978038" visible="true" weight="0.24847814" />
       <window_info id="Structure" order="1" sideWeight="0.5021962" side_tool="true" weight="0.19679381" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" sideWeight="0.5022971" side_tool="true" weight="0.26091763" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933258" />
+      <window_info id="Favorites" order="5" sideWeight="0.5022971" side_tool="true" weight="0.26091763" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24958494" />
       <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32946378" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -361,27 +536,50 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="11" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="146" column="44" lean-forward="true" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Solucion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13650">
-          <caret line="910" column="16" selection-start-line="910" selection-start-column="16" selection-end-line="910" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Uso.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
           <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Uso#0;class#Uso#0" />
+            <element signature="method#siguienteUsoUniforme#0;class#Uso#0" />
+            <element signature="e#1147#1207#0" />
+            <element signature="method#siguienteUsoRuletaFosforo#0;class#Uso#0" />
+            <element signature="e#2038#2098#0" />
+            <element signature="method#siguienteUsoRuletaProduccion#0;class#Uso#0" />
+            <element signature="method#siguienteUsoRuletaFosforoCumpleCantUsos#0;class#Uso#0" />
+            <element signature="method#siguienteUsoRuletaProduccionCumpleCantUsos#0;class#Uso#0" />
+            <element signature="method#cargarUsosDesdeArchivos#0;class#Uso#0" />
+            <element signature="method#cargarUsoDesdeArchivo#0;class#Uso#0" />
+            <element signature="e#12935#12982#0" />
+            <element signature="e#13496#13544#0" />
+            <element signature="e#14792#14836#0" />
+            <element signature="e#16239#16283#0" />
+            <element signature="e#18971#18999#0" />
+            <element signature="e#19053#19068#0" />
+            <element signature="method#imprimirUso#0;class#Uso#0" />
+            <element signature="method#imprimirUsos#0;class#Uso#0" />
+            <element signature="method#crearArchivosUsos#0;class#Uso#0" />
+            <element signature="method#crearArchivo#0;class#Uso#0" />
+            <element signature="e#22002#22049#0" />
+            <element signature="method#getEstacionUso#0;class#Uso#0" />
+            <element signature="method#indiceUso#0;class#Uso#0" />
+            <element signature="method#usoYDuracion#0;class#Uso#0" />
+            <element signature="method#obtenerUsoBase#0;class#Uso#0" />
+            <element signature="method#obtenerUsoReservado#0;class#Uso#0" />
+            <element signature="method#cargarUsos#0;class#Uso#0" />
+            <element signature="e#37758#37781#0" />
+            <element signature="e#43214#43241#0" />
+            <element signature="method#cargarUsosTest#0;class#Uso#0" />
+            <element signature="e#44419#44444#0" />
+            <element signature="method#tengoSiguiente#0;class#Uso#0" />
+            <element signature="method#imprimirSiguientesUsos#0;class#Uso#0" />
           </folding>
         </state>
       </provider>
@@ -429,7 +627,39 @@
         <state relative-caret-position="1425">
           <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Uso#0;class#Uso#0" />
+            <element signature="method#siguienteUsoUniforme#0;class#Uso#0" />
+            <element signature="e#1147#1207#0" />
+            <element signature="method#siguienteUsoRuletaFosforo#0;class#Uso#0" />
+            <element signature="e#2038#2098#0" />
+            <element signature="method#siguienteUsoRuletaProduccion#0;class#Uso#0" />
+            <element signature="method#siguienteUsoRuletaFosforoCumpleCantUsos#0;class#Uso#0" />
+            <element signature="method#siguienteUsoRuletaProduccionCumpleCantUsos#0;class#Uso#0" />
+            <element signature="method#cargarUsosDesdeArchivos#0;class#Uso#0" />
+            <element signature="method#cargarUsoDesdeArchivo#0;class#Uso#0" />
+            <element signature="e#12935#12982#0" />
+            <element signature="e#13496#13544#0" />
+            <element signature="e#14792#14836#0" />
+            <element signature="e#16239#16283#0" />
+            <element signature="e#18971#18999#0" />
+            <element signature="e#19053#19068#0" />
+            <element signature="method#imprimirUso#0;class#Uso#0" />
+            <element signature="method#imprimirUsos#0;class#Uso#0" />
+            <element signature="method#crearArchivosUsos#0;class#Uso#0" />
+            <element signature="method#crearArchivo#0;class#Uso#0" />
+            <element signature="e#22002#22049#0" />
+            <element signature="method#getEstacionUso#0;class#Uso#0" />
+            <element signature="method#indiceUso#0;class#Uso#0" />
+            <element signature="method#usoYDuracion#0;class#Uso#0" />
+            <element signature="method#obtenerUsoBase#0;class#Uso#0" />
+            <element signature="method#obtenerUsoReservado#0;class#Uso#0" />
+            <element signature="method#cargarUsos#0;class#Uso#0" />
+            <element signature="e#37758#37781#0" />
+            <element signature="e#43214#43241#0" />
+            <element signature="method#cargarUsosTest#0;class#Uso#0" />
+            <element signature="e#44419#44444#0" />
+            <element signature="method#tengoSiguiente#0;class#Uso#0" />
+            <element signature="method#imprimirSiguientesUsos#0;class#Uso#0" />
           </folding>
         </state>
       </provider>
@@ -481,7 +711,39 @@
         <state relative-caret-position="1425">
           <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Uso#0;class#Uso#0" />
+            <element signature="method#siguienteUsoUniforme#0;class#Uso#0" />
+            <element signature="e#1147#1207#0" />
+            <element signature="method#siguienteUsoRuletaFosforo#0;class#Uso#0" />
+            <element signature="e#2038#2098#0" />
+            <element signature="method#siguienteUsoRuletaProduccion#0;class#Uso#0" />
+            <element signature="method#siguienteUsoRuletaFosforoCumpleCantUsos#0;class#Uso#0" />
+            <element signature="method#siguienteUsoRuletaProduccionCumpleCantUsos#0;class#Uso#0" />
+            <element signature="method#cargarUsosDesdeArchivos#0;class#Uso#0" />
+            <element signature="method#cargarUsoDesdeArchivo#0;class#Uso#0" />
+            <element signature="e#12935#12982#0" />
+            <element signature="e#13496#13544#0" />
+            <element signature="e#14792#14836#0" />
+            <element signature="e#16239#16283#0" />
+            <element signature="e#18971#18999#0" />
+            <element signature="e#19053#19068#0" />
+            <element signature="method#imprimirUso#0;class#Uso#0" />
+            <element signature="method#imprimirUsos#0;class#Uso#0" />
+            <element signature="method#crearArchivosUsos#0;class#Uso#0" />
+            <element signature="method#crearArchivo#0;class#Uso#0" />
+            <element signature="e#22002#22049#0" />
+            <element signature="method#getEstacionUso#0;class#Uso#0" />
+            <element signature="method#indiceUso#0;class#Uso#0" />
+            <element signature="method#usoYDuracion#0;class#Uso#0" />
+            <element signature="method#obtenerUsoBase#0;class#Uso#0" />
+            <element signature="method#obtenerUsoReservado#0;class#Uso#0" />
+            <element signature="method#cargarUsos#0;class#Uso#0" />
+            <element signature="e#37758#37781#0" />
+            <element signature="e#43214#43241#0" />
+            <element signature="method#cargarUsosTest#0;class#Uso#0" />
+            <element signature="e#44419#44444#0" />
+            <element signature="method#tengoSiguiente#0;class#Uso#0" />
+            <element signature="method#imprimirSiguientesUsos#0;class#Uso#0" />
           </folding>
         </state>
       </provider>
@@ -626,51 +888,227 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pruebamain.java" />
+    <entry file="file://$PROJECT_DIR$/src/Pruebamain.form" />
     <entry file="file://$PROJECT_DIR$/src/Productor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-263">
+        <state relative-caret-position="240">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Uso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3963">
-          <caret line="638" column="11" selection-start-line="638" selection-start-column="11" selection-end-line="641" selection-end-column="32" />
+        <state relative-caret-position="4065">
+          <caret line="801" column="32" selection-start-line="801" selection-start-column="32" selection-end-line="801" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pixel.java">
+    <entry file="file://$PROJECT_DIR$/src/Uso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="148" column="44" selection-start-line="148" selection-start-column="44" selection-end-line="148" selection-end-column="44" />
+        <state relative-caret-position="285">
+          <caret line="403" column="33" lean-forward="true" selection-start-line="403" selection-start-column="33" selection-end-line="403" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#Uso#0;class#Uso#0" />
+            <element signature="method#siguienteUsoUniforme#0;class#Uso#0" />
+            <element signature="e#1147#1207#0" />
+            <element signature="method#siguienteUsoRuletaFosforo#0;class#Uso#0" />
+            <element signature="e#2038#2098#0" />
+            <element signature="method#siguienteUsoRuletaProduccion#0;class#Uso#0" />
+            <element signature="method#siguienteUsoRuletaFosforoCumpleCantUsos#0;class#Uso#0" />
+            <element signature="method#siguienteUsoRuletaProduccionCumpleCantUsos#0;class#Uso#0" />
+            <element signature="method#cargarUsosDesdeArchivos#0;class#Uso#0" />
+            <element signature="method#cargarUsoDesdeArchivo#0;class#Uso#0" />
+            <element signature="e#12935#12982#0" />
+            <element signature="e#13496#13544#0" />
+            <element signature="e#14792#14836#0" />
+            <element signature="e#16239#16283#0" />
+            <element signature="e#18971#18999#0" />
+            <element signature="e#19053#19068#0" />
+            <element signature="method#imprimirUso#0;class#Uso#0" />
+            <element signature="method#imprimirUsos#0;class#Uso#0" />
+            <element signature="method#crearArchivosUsos#0;class#Uso#0" />
+            <element signature="method#crearArchivo#0;class#Uso#0" />
+            <element signature="e#22002#22049#0" />
+            <element signature="method#getEstacionUso#0;class#Uso#0" />
+            <element signature="method#indiceUso#0;class#Uso#0" />
+            <element signature="method#usoYDuracion#0;class#Uso#0" />
+            <element signature="method#obtenerUsoBase#0;class#Uso#0" />
+            <element signature="method#obtenerUsoReservado#0;class#Uso#0" />
+            <element signature="method#cargarUsos#0;class#Uso#0" />
+            <element signature="e#37758#37781#0" />
+            <element signature="e#43214#43241#0" />
+            <element signature="method#cargarUsosTest#0;class#Uso#0" />
+            <element signature="e#44419#44444#0" />
+            <element signature="method#tengoSiguiente#0;class#Uso#0" />
+            <element signature="method#imprimirSiguientesUsos#0;class#Uso#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constantes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        <state relative-caret-position="465">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pixel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
+          <folding>
+            <element signature="e#399#429#0" />
+            <element signature="method#Pixel#0;class#Pixel#0" />
+            <element signature="method#imprimirPixel#0;class#Pixel#0" />
+            <element signature="method#imprimirPixeles#0;class#Pixel#0" />
+            <element signature="method#cargarPixelesTest#0;class#Pixel#0" />
+            <element signature="method#cargarPixeles#0;class#Pixel#0" />
+            <element signature="e#2209#2346#0" />
+            <element signature="e#2787#2819#0" />
+            <element signature="e#3230#3260#0" />
+            <element signature="e#3466#3513#0" />
+            <element signature="e#5891#5920#0" />
+            <element signature="e#6596#6624#0" />
+            <element signature="method#cargarPixelesDeProductor#0;class#Pixel#0" />
+            <element signature="e#6798#6935#0" />
+            <element signature="e#7327#7359#0" />
+            <element signature="e#7770#7800#0" />
+            <element signature="e#8006#8053#0" />
+            <element signature="e#8222#8241#0" />
+            <element signature="e#9045#9073#0" />
+            <element signature="e#9654#9684#0" />
+            <element signature="e#9890#9937#0" />
+            <element signature="e#12302#12331#0" />
+            <element signature="e#13007#13035#0" />
+            <element signature="method#contarLineas#0;class#Pixel#0" />
+            <element signature="e#13603#13633#0" />
+            <element signature="e#14290#14318#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solucion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="259" column="36" lean-forward="true" selection-start-line="259" selection-start-column="36" selection-end-line="259" selection-end-column="36" />
+        <state relative-caret-position="159">
+          <caret line="348" column="28" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
+          <folding>
+            <element signature="class#RestriccionProductividadProductores#0" />
+            <element signature="method#RestriccionProductividadProductores#0;class#RestriccionProductividadProductores#0" />
+            <element signature="method#clone#0;class#RestriccionProductividadProductores#0" />
+            <element signature="class#RestriccionUsosDistintos#0" />
+            <element signature="method#RestriccionUsosDistintos#0;class#RestriccionUsosDistintos#0" />
+            <element signature="method#clone#0;class#RestriccionUsosDistintos#0" />
+            <element signature="e#2589#2963#0" />
+            <element signature="e#2968#3452#0" />
+            <element signature="e#3457#3909#0" />
+            <element signature="e#3915#4437#0" />
+            <element signature="e#4443#4878#0" />
+            <element signature="e#5627#6188#0" />
+            <element signature="e#6193#6970#0" />
+            <element signature="e#6975#7793#0" />
+            <element signature="e#7800#8352#0" />
+            <element signature="e#8357#8939#0" />
+            <element signature="e#8945#9116#0" />
+            <element signature="e#9122#9325#0" />
+            <element signature="e#9331#9508#0" />
+            <element signature="e#9514#10397#0" />
+            <element signature="e#10404#11081#0" />
+            <element signature="e#11087#11482#0" />
+            <element signature="e#11488#12023#0" />
+            <element signature="e#12030#12578#0" />
+            <element signature="e#12584#13285#0" />
+            <element signature="e#13291#13687#0" />
+            <element signature="e#13692#14142#0" />
+            <element signature="e#14148#15142#0" />
+            <element signature="e#15150#16046#0" />
+            <element signature="e#16053#16371#0" />
+            <element signature="e#16377#16711#0" />
+            <element signature="e#16717#17883#0" />
+            <element signature="e#17890#18028#0" />
+            <element signature="e#18034#24543#0" />
+            <element signature="e#18258#18312#0" />
+            <element signature="e#18520#18601#0" />
+            <element signature="e#20910#21056#0" />
+            <element signature="e#21676#21720#0" />
+            <element signature="e#21893#22090#0" />
+            <element signature="e#22999#23033#0" />
+            <element signature="e#24549#31333#0" />
+            <element signature="e#24886#24940#0" />
+            <element signature="e#25148#25229#0" />
+            <element signature="e#27403#27549#0" />
+            <element signature="e#28115#28159#0" />
+            <element signature="e#28478#28675#0" />
+            <element signature="e#29584#29618#0" />
+            <element signature="e#31339#34814#0" />
+            <element signature="e#31406#31498#0" />
+            <element signature="e#31798#31852#0" />
+            <element signature="e#32060#32141#0" />
+            <element signature="e#32812#32856#0" />
+            <element signature="e#33048#33109#0" />
+            <element signature="e#33396#33593#0" />
+            <element signature="e#34820#38353#0" />
+            <element signature="e#34909#35001#0" />
+            <element signature="e#35197#35251#0" />
+            <element signature="e#36598#36659#0" />
+            <element signature="e#36934#37131#0" />
+            <element signature="e#38362#40129#0" />
+            <element signature="e#38408#38469#0" />
+            <element signature="e#40135#42320#0" />
+            <element signature="e#42326#45626#0" />
+            <element signature="e#45632#50813#0" />
+            <element signature="e#45972#46068#0" />
+            <element signature="e#47461#47495#0" />
+            <element signature="e#50820#53337#0" />
+            <element signature="e#52156#52337#0" />
+            <element signature="e#53343#55256#0" />
+            <element signature="e#55262#57225#0" />
+            <element signature="e#57231#57776#0" />
+            <element signature="e#57464#57511#0" />
+            <element signature="e#57782#59896#0" />
+            <element signature="e#59902#61669#0" />
+            <element signature="e#61675#63348#0" />
+            <element signature="e#63353#65027#0" />
+            <element signature="e#65032#70838#0" />
+            <element signature="e#65719#65810#0" />
+            <element signature="e#66545#66622#0" />
+            <element signature="e#67397#67488#0" />
+            <element signature="e#68102#68112#0" />
+            <element signature="e#68692#68735#0" />
+            <element signature="e#69567#69610#0" />
+            <element signature="e#70599#70713#0" />
+            <element signature="e#70844#71570#0" />
+            <element signature="e#71576#77330#0" />
+            <element signature="e#72098#72175#0" />
+            <element signature="e#72322#72356#0" />
+            <element signature="e#73242#73262#0" />
+            <element signature="e#77073#77156#0" />
+            <element signature="e#77336#79854#0" />
+            <element signature="e#77536#77616#0" />
+            <element signature="e#78255#78307#0" />
+            <element signature="e#78496#78596#0" />
+            <element signature="e#79861#82299#0" />
+            <element signature="e#79946#80006#0" />
+            <element signature="e#80738#80856#0" />
+            <element signature="e#81963#82079#0" />
+            <element signature="e#82306#85550#0" />
+            <element signature="e#82713#82800#0" />
+            <element signature="e#84190#84244#0" />
+            <element signature="e#85556#91196#0" />
+            <element signature="e#87101#87121#0" />
+            <element signature="e#90939#91022#0" />
+            <element signature="e#91202#91368#0" />
+            <element signature="e#91374#92197#0" />
+            <element signature="e#92203#92485#0" />
+            <element signature="e#92490#93027#0" />
+            <element signature="e#93033#93728#0" />
+            <element signature="e#93307#93354#0" />
+            <element signature="e#93734#95067#0" />
+            <element signature="e#95073#96371#0" />
+          </folding>
         </state>
       </provider>
     </entry>

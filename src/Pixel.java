@@ -53,6 +53,9 @@ public class Pixel {
         }
         return pixeles;
     }
+
+    //TODO: Exepcion No exite el uso.
+    //TODO: Exepcion Excede la duracion.
     public static Pixel[] cargarPixeles(String fileName){
         //Se abre el archivo .dbf se pasa a un texto plano, se remplazan las ',' por ',' para que no haya problemas al pasarlo de strings a float
         //Se borran los usos que no queremos con reg exp: ^.*<Uso>.*$\n para los usos: Bajo, Buffer, Calle, Forestacion, Humedal, Monte Nativo, Tajamar,Tambo
@@ -146,6 +149,8 @@ public class Pixel {
         return pixeles;
     }
 
+    //TODO: Exepcion No exite el uso.
+    //TODO: Exepcion Excede la duracion.
     public static Pixel[] cargarPixelesDeProductor(String fileName, int numProductor){
         //Se abre el archivo .dbf se pasa a un texto plano, se remplazan las ',' por ',' para que no haya problemas al pasarlo de strings a float
         //Se borran los usos que no queremos con reg exp: ^.*<Uso>.*$\n para los usos: Bajo, Buffer, Calle, Forestacion, Humedal, Monte Nativo, Tajamar,Tambo
