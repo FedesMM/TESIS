@@ -69,6 +69,7 @@ public class Solucion {
     //Restriccion 3 usos distintos, cuantos productores no la cumplen.
     RestriccionUsosDistintos restriccionUsosDistintos;
 
+    /**Aumenta el peso que se le asigna al Fosforo al momento de evaluar la funcion objetivo**/
     //TODO: Parametriziar el aumento aumento como una variable de decision
     public static float actualizarPesoFosforo(Solucion solucionOriginal, Solucion solucion, float pesoFosforo) {
 
@@ -79,6 +80,8 @@ public class Solucion {
             return (pesoFosforo/1.1F);
         }
     }
+
+    /**Actualiza el peso que se le asigan al incumplimiento de la Productividad al momento de evaluar la funcion objetivo**/
     //TODO: Parametriziar el aumento aumento como una variable de decision
     public static float actualizarPesoProduccion(Solucion solucionOriginal, Solucion solucion, float pesoProduccion) {
 
@@ -89,6 +92,8 @@ public class Solucion {
             return (pesoProduccion/1.1F);
         }
     }
+
+    /**Actualiza el peso que se le asigna al incumplimiento de la CantUsos al momento de evaluar la funcion objetivo**/
     //TODO: Parametriziar el aumento aumento como una variable de decision
     public static float actualizarPesoCantUsos(Solucion solucionOriginal, Solucion solucion, float pesoCantUsos) {
 
@@ -100,6 +105,7 @@ public class Solucion {
         }
     }
 
+    /**Convierte un genoma en una solucion**/
     public static Solucion genomaASolucion(int[] genoma) {
         Solucion solucion= new Solucion();
         //Calculo valores auxiliares
@@ -114,6 +120,7 @@ public class Solucion {
         return solucion;
     }
 
+    /**Convierte una solucion en un genoma**/
     public int[] solucionAGenoma() {
         int[] genoma = new int[Constantes.cantPixeles * Constantes.cantEstaciones];
         for (int iPixel = 0; iPixel < Constantes.cantPixeles; iPixel++) {
@@ -125,6 +132,7 @@ public class Solucion {
         return genoma;
     }
 
+    /**Clona una solucion**/
     public Solucion clone(){
         Solucion clon = new Solucion ();
         clon.fosforo=this.fosforo;
@@ -137,12 +145,16 @@ public class Solucion {
         return clon;
     }
 
+    /**Imprime el valor de la funcion objetivo de esta solucion, tomando los pesos del fosforo, la productividad y
+     * la cantIncumplimiento de Constantes.java **/
     public void imprimirFuncionObjetivo(){
         System.out.println("Funcion Objetivo: "+this.evaluarFuncionObjetivo());
         System.out.println("\tFosforo modulado: "+Constantes.pesoIncumplimientoFosforo * (this.fosforo /(Constantes.maximoIncumplimientoFosforo*this.areaTotal)));
         System.out.println("\tUsos Distintos modulado: "+ Constantes.pesoIncumplimientoUsosDistintos * (this.restriccionUsosDistintos.cantIncumplimientos/ Constantes.maximoIncumplimientoUsosDistintos));
         System.out.println("\tProductividad Estacion modulado: "+(-1)*Constantes.pesoIncumplimientoProductividadMinimaEstacion * (this.restriccionProductividadMinimaEstacion.maximoDesviacion /Constantes.maximoIncumplimientoProductividadMinimaEstacion));
     }
+
+    /**Imprime el valor de la funcion objetivo de esta solucion segun los pesos dados**/
     public void imprimirFuncionObjetivo(float pesoFosforo, float pesoProductividad, float pesoCantUsos){
         System.out.println("Peso Fosforo: "+pesoFosforo+" Peso Productividad: "+pesoProductividad+" Peso CantUsos:"+pesoCantUsos);
         System.out.println("Funcion Objetivo: "+this.evaluarFuncionObjetivo(pesoFosforo,pesoProductividad,pesoCantUsos));
@@ -152,36 +164,46 @@ public class Solucion {
 
     }
 
-
+    /**Devuelve el valor de la funcion objetivo de la solucion segun los pesos dados**/
     public float evaluarFuncionObjetivo(float pesoFosforo, float pesoProductividad, float pesoCantUsos){
         float valor=0;
 
         valor= pesoFosforo * (this.fosforo /(Constantes.maximoIncumplimientoFosforo*this.areaTotal));
-        valor += - pesoProductividad * (this.restriccionProductividadMinimaEstacion.cantIncumplimientos /Constantes.maximoIncumplimientoProductividadMinimaEstacion);
+        valor += - pesoProductividad * (this.restriccionProductividadMinimaEstacion.cantIncumplimientos /Constantes.maximaCantidadIncumplimientoProductividadMinimaEstacion);
         valor +=  pesoCantUsos * (this.restriccionUsosDistintos.cantIncumplimientos/ Constantes.maximoIncumplimientoUsosDistintos);
         return valor;
     }
+
+    /**Devuelve el valor de la funcion objetivo de la solucion segun los pesos dados, tomando los
+     * pesos de Constantes.java**/
     public float evaluarFuncionObjetivo(){
         float valor=0;
         valor= Constantes.pesoIncumplimientoFosforo * (this.fosforo /(Constantes.maximoIncumplimientoFosforo*this.areaTotal));
-        valor += -Constantes.pesoIncumplimientoProductividadMinimaEstacion * (this.restriccionProductividadMinimaEstacion.cantIncumplimientos /Constantes.maximoIncumplimientoProductividadMinimaEstacion);
+        valor += -Constantes.pesoIncumplimientoProductividadMinimaEstacion * (this.restriccionProductividadMinimaEstacion.cantIncumplimientos /Constantes.maximaCantidadIncumplimientoProductividadMinimaEstacion);
         valor +=  Constantes.pesoIncumplimientoUsosDistintos * (this.restriccionUsosDistintos.cantIncumplimientos/ Constantes.maximoIncumplimientoUsosDistintos);
         return valor;
     }
 
+    /**Devuelve el valor de fosforo esportado por esta solucion, modulado por  el maximo fosforo posible y multiplicado
+     * por el peso ambos definidios en Constantes.java**/
     public float evaluarFosforoModulado(){
         return Constantes.pesoIncumplimientoFosforo * (this.fosforo /(Constantes.maximoIncumplimientoFosforo*this.areaTotal));
     }
 
+    /**Devuelve la media del incumplimiento de productividad, modulado por  el maximo incumplimiento posible y multiplicado
+     * por el peso  ambos definidios en Constantes.java**/
     public float evaluarIncumplimientoProductividadModulado(){
         return -(this.restriccionProductividadMinimaEstacion.mediaDesviacion /Constantes.maximoIncumplimientoProductividadMinimaEstacion);
     }
 
+    /**Devuelve la media del incumplimiento de cantUsos, modulado por  el maximo incumplimiento posible y multiplicado
+     * por el peso  ambos definidios en Constantes.java**/
     public float evaluarIncumplimientoUsosDistintosModulado(){
 
         return this.restriccionUsosDistintos.cantIncumplimientos/ Constantes.maximoIncumplimientoUsosDistintos;
     }
 
+    /**Crea una solucion vacia**/
     public Solucion (){
         this.fosforo=0;
         //Por la especificacion del lenguaje los array tienen valores 0  al inicializarce
@@ -199,26 +221,16 @@ public class Solucion {
 
     }
 
-
+    /**Imprime en la linea de comandos los valores de la solucion**/
     public void imprimirSolucion(){
         System.out.println("\tSOLUCION:");
         System.out.println("\t\tFosforo Total: "+this.fosforo);
         this.imprimirMatriz();
         this.imprimirRestriccionProductividadMinimaEstacion();
         this.imprimirRestriccionUsosDistintos();
-        /*
-        this.imprimirProductividadSobreSuperficiePorEstacion();
-        this.imprimirFosforoAnual();
-
-        this.imprimirRestriccionFosforoAnual();
-        this.imprimirRestriccionUsosPorProductor();
-
-        --Deprecated--
-        System.out.println("\t\tRestriccion productores: "+this.cumpleRestriccionProductores);
-        this.imprimirRestriccionProductores();
-        */
     }
 
+    /**Imprime la planificacion de un pixel**/
     public void imprimirPixel(int pixel){
         System.out.printf("\t\t\tPixel "+pixel+": {");
         for (int estacion =0; estacion < this.matriz[pixel].length; estacion++){
@@ -230,6 +242,7 @@ public class Solucion {
         System.out.println("}");
     }
 
+    /**Imprime todos la matriz con la planificacion de cada pixel**/
     public void imprimirMatriz(){
         System.out.println("\t\tMatriz:");
         for (int pixel =0; pixel< this.matriz.length;pixel++){
@@ -244,21 +257,7 @@ public class Solucion {
         }
     }
 
-
-    public void imprimirUsosPorEstacion(){
-        System.out.println("\t\tMatriz:");
-        for (int pixel =0; pixel< this.matriz.length;pixel++){
-            System.out.printf("\t\t\tPixel "+pixel+": {");
-            for (int estacion =0; estacion < this.matriz[pixel].length; estacion++){
-                System.out.print(this.matriz[pixel][estacion]/100);
-                if (estacion!=(this.matriz[pixel].length-1)){
-                    System.out.printf(", ");
-                }
-            }
-            System.out.println("}");
-        }
-    }
-
+    /**Imprime los valores de la restriccion de Productividad por estacion de esta Solucion**/
     public void imprimirRestriccionProductividadMinimaEstacion(){
         System.out.println("\t\tRestriccion Productividad Minima Estacion: "+ this.restriccionProductividadMinimaEstacion.cumpleRestriccion);
         System.out.println("\t\t\tCant Incumplimientos: "+ this.restriccionProductividadMinimaEstacion.cantIncumplimientos);
@@ -267,6 +266,7 @@ public class Solucion {
         System.out.println("\t\t\tMedia Desviacion: "+ this.restriccionProductividadMinimaEstacion.mediaDesviacion);
     }
 
+    /**Imprime los valores de la restriccion de CantUsos por estacion de esta Solucion**/
     public void imprimirRestriccionUsosDistintos(){
         System.out.println("\t\tRestriccion Usos Distintos: "+ this.restriccionUsosDistintos.cumpleRestriccion);
         System.out.println("\t\t\tCant Incumplimientos: "+ this.restriccionUsosDistintos.cantIncumplimientos);
@@ -274,6 +274,9 @@ public class Solucion {
 
 
     }
+
+    /**Imprime los valores de la restriccion CantUsos de esta Solucion y una matriz con cantidad de usos por
+     * estacion para cada productor**/
     public void imprimirRestriccionUsosDistintosExpandida(){
 
         System.out.println("\t\tRestriccion Usos Distintos: "+ this.restriccionUsosDistintos.cumpleRestriccion);
@@ -283,6 +286,7 @@ public class Solucion {
 
     }
 
+    /**Imprime una matriz con cantidad de usos por estacion para cada productor**/
     public void imprimirUsosDisitintosPorEstacion(){
         int cantUsos;
 
@@ -307,8 +311,7 @@ public class Solucion {
         }
     }
 
-
-
+    /**Imprime la productividad (dividida por su area total) de cada productor en cada estacion**/
     public void imprimirProductividadSobreSuperficiePorEstacion(){
         //Imprime la productividad (dividida por su area total) de cada productor en cada estacion
         System.out.println("\t\tProductividad Productores:");
@@ -325,7 +328,7 @@ public class Solucion {
         }
     }
 
-
+    /**Crea una solucion creando pixeles al azar.**/
     public static Solucion crearSolucion(){
         Solucion solucion = new Solucion();
         //Cargar cada uno de los pixeles
@@ -336,6 +339,7 @@ public class Solucion {
         return solucion;
     }
 
+    /**Crea una solucion crando pixeles Factibles al azar **/
     public static Solucion crearSolucionFactible(){
         Solucion solucion = new Solucion();
         //Cargar cada uno de los pixeles
@@ -346,6 +350,7 @@ public class Solucion {
         return solucion;
     }
 
+    /****/
     //TODO: SEGUIR DE ACA!!!
     public static Solucion firstImprove(Solucion solucion, float pesoFosforo, float pesoProductividad, float pesoCantUsos, boolean distanciaAlRio){
         Solucion respaldoSolucion=solucion.clone();
@@ -371,12 +376,13 @@ public class Solucion {
         return respaldoSolucion;
     }
 
-
+    /****/
     public void chequearRestricciones(){
         this.cumpleRestriccionesProductividad();
         this.cumpleRestriccionUsosDistintos();
     }
 
+    /****/
     public  void cargarPixel(int iPixel){
         //Carga un nuevo pixel
         int iEstacion=0, iEstacionesCargadas=0, usoACargar, estacionActual, estacionesDeEsteUso, usoYDuracion[];
@@ -467,6 +473,7 @@ public class Solucion {
         }
     }
 
+    /****/
     public  void cargarPixelFactible(int iPixel){
         //Carga un nuevo pixel
         int iEstacion=0, iEstacionesCargadas=0, usoACargar, estacionActual, estacionesDeEsteUso, usoYDuracion[], productor=Constantes.pixeles[iPixel].productor;
@@ -561,6 +568,7 @@ public class Solucion {
         }
     }
 
+    /****/
     public static int [] crearGenomaPixel (int iPixel, int aleatorio){ //aleatorio=0 sortea por fosforo, aleatorio=1 sortea random, aleatorio>1 sotea productividad
         //creo el pixel a devolver
         int [] nuevoPixel=new int [Constantes.cantEstaciones];
@@ -630,6 +638,7 @@ public class Solucion {
 
     }
 
+    /****/
     public static int[] modificarGenomaPixel (int iPixel, int[] genomaPixel, int aleatorio){ //aleatorio=0 sortea por fosforo, aleatorio=1 sortea random, aleatorio>1 sotea productividad
         //Modifica un pixel desde alguna estacion
 
@@ -697,9 +706,7 @@ public class Solucion {
         return genomaPixel;
     }
 
-
-
-
+    /****/
     public void limpiarPixel(int iPixel){
         //Libera un pixel actualizando las variables de restricciones
         //System.out.println("Limpiar pixel: "+iPixel);
@@ -727,6 +734,7 @@ public class Solucion {
         }
     }
 
+    /****/
     public void recalcular(){
         int usoACalcular, estacionesDeEsteUso;
         //Limpio valores
@@ -758,6 +766,7 @@ public class Solucion {
         this.chequearRestricciones();
     }
 
+    /****/
     public void recalcular(boolean imprimir, boolean distanciaAlRio){
         //this.imprimirMatriz();
         int usoACalcular, estacionesDeEsteUso;
@@ -805,6 +814,7 @@ public class Solucion {
         this.chequearRestricciones();
     }
 
+    /****/
     public  void cambiarPixel(int iPixel, boolean distanciaAlRio){
         //Toma un pixel ya cargado y lo cambia limpiando y actualizando variables en una sola recorrida
         int iEstacion=0, usoACargar, usoABorrar, estacionActual, estacionesDeUsoACargar, estacionesDeUsoABorrar, usoYDuracion[];
@@ -874,7 +884,7 @@ public class Solucion {
         }
     }
 
-
+    /****/
     public void  cumpleRestriccionesProductividad(){
         float maximaDesviacionEstacion=0,mediaDesviacionEstacion=0, desviacion, productividadSobreSuperficie=0;
         int incumplimientoEstacion=0;
@@ -910,6 +920,7 @@ public class Solucion {
 
     }
 
+    /****/
     public  void cumpleRestriccionUsosDistintos(){
         int cantUsosDistintos;
         this.restriccionUsosDistintos.cumpleRestriccion=true;
@@ -942,6 +953,7 @@ public class Solucion {
 */
     }
 
+    /****/
     public void crearArchivoMatriz(){
         int uso=0;
         String[][] matriz;
@@ -988,6 +1000,7 @@ public class Solucion {
 
     }
 
+    /****/
     public void crearArchivoFitness(){
 
         try {
@@ -1003,6 +1016,7 @@ public class Solucion {
 
     }
 
+    /****/
     public void crearArchivoMatrizNombreUsoExtendido(){
         int uso=0;
         String[][] matriz;
@@ -1051,6 +1065,7 @@ public class Solucion {
 
     }
 
+    /****/
     public void crearArchivoCantidadUsos(){
         int cantUsos;
         try {
@@ -1088,6 +1103,7 @@ public class Solucion {
         }
     }
 
+    /****/
     public void crearArchivoProductividadSobreAreaTotal(){
         float total=0, totalConSuperficie=0;
         try {
@@ -1116,6 +1132,8 @@ public class Solucion {
             e.printStackTrace();
         }
     }
+
+    /****/
     public void crearArchivoFosforoSobreAreaTotal(){
         float total=0, totalConSuperficie=0;
         try {
@@ -1145,6 +1163,8 @@ public class Solucion {
             e.printStackTrace();
         }
     }
+
+    /****/
     public boolean factibilizarCantUsos(){
         int estacionOriginal, posibleUso;
         //for (int iProductor = 0; iProductor< Constantes.cantProductores; iProductor++) {
@@ -1229,6 +1249,7 @@ public class Solucion {
         return true;
     }
 
+    /****/
     private ArrayList<Integer> usosDelProductorPorEstacion(int iProductor, int iEstacion) {
         ArrayList<Integer> usosDelProductorEstaEstacion= new ArrayList<>();
         for (int iUso = 0; iUso < Constantes.cantUsos; iUso++) {
@@ -1243,6 +1264,7 @@ public class Solucion {
         return usosDelProductorEstaEstacion;
     }
 
+    /****/
     private boolean corregirPixelSegunCantUsos(int iPixel, int estacionOriginal, ArrayList<Integer> usosDelProductorEstaEstacion) {
         //Toma un pixel ya cargado y lo cambia limpiando y actualizando variables en una sola recorrida
         int iEstacion=estacionOriginal, usoACargar=0, usoABorrar, estacionActual, estacionesDeUsoACargar, estacionesDeUsoABorrar, usoYDuracion[];
@@ -1319,6 +1341,7 @@ public class Solucion {
         return true;
     }
 
+    /****/
     public int sortearPixelDeProductorParaFactibilizarPorUsos(int iEstacion, int iProductor) {
         List<Integer> pixelACambiar= new ArrayList<>();
         int minEstacion = Constantes.cantEstaciones;
@@ -1362,7 +1385,7 @@ public class Solucion {
 
     }
 
-
+    /****/
     public void factibilizarProductividad() {
         int pixelACambiar, estacionDelUso;
 //        System.out.println("factibilizarProductividad: ");
@@ -1395,7 +1418,7 @@ public class Solucion {
         }
     }
 
-
+    /****/
     private int sortearPixelDeProductorParaFactibilizarProductividad(int iEstacion, int iProductor) {
         //Obtengo la produccion total del productor en esta estacion
         float produccionTotal= 0, produccionInvertidaTotal=0, sorteo=0, acumulado=0;
@@ -1458,6 +1481,7 @@ public class Solucion {
         return 0;
     }
 
+    /****/
     private boolean corregirPixelSegunProductividad(int iPixel, int estacionOriginal, ArrayList<Integer> usosDelProductorEstaEstacion) {
         //Toma un pixel ya cargado y lo cambia limpiando y actualizando variables en una sola recorrida
         int iEstacion=estacionOriginal, usoACargar=0, usoABorrar, estacionActual, estacionesDeUsoACargar, estacionesDeUsoABorrar, usoYDuracion[];
@@ -1532,10 +1556,12 @@ public class Solucion {
         return true;
     }
 
+    /****/
     public boolean esFactible() {
         return (this.restriccionUsosDistintos.cumpleRestriccion && this.restriccionProductividadMinimaEstacion.cumpleRestriccion);
     }
 
+    /****/
     public Solucion factibilizar(int repeticiones, int profundidad) {
         Solucion copia=this.clone();
         for (int iRepeticion = 0; iRepeticion < repeticiones && !this.esFactible(); iRepeticion++) {
@@ -1556,17 +1582,21 @@ public class Solucion {
         return this;
     }
 
+    /****/
     public float evaluarFitness() {
         return this.fosforo + this.restriccionProductividadMinimaEstacion.cantIncumplimientos * Constantes.maximoIncumplimientoFosforo
                 + this.restriccionUsosDistintos.cantIncumplimientos * Constantes.maximoIncumplimientoFosforo;
     }
     //float produccionAcumulada;
+
+
     public void imprimirFitness(){
         System.out.println("Funcion Objetivo: "+this.evaluarFitness());
         System.out.println("\tFosforo: "+this.fosforo);
         System.out.println("\tIncumplimiento Usos Distintos: "+ this.restriccionProductividadMinimaEstacion.cantIncumplimientos * Constantes.maximoIncumplimientoFosforo);
         System.out.println("\tIncumplimiento Productividad Estacion: "+(-1)*this.restriccionUsosDistintos.cantIncumplimientos * Constantes.maximoIncumplimientoFosforo);
     }
+    /****/
 
     public void crearTimeLog(int iSolucion, long ultimaMejora, long mejoraActual) {
         try {
@@ -1581,6 +1611,7 @@ public class Solucion {
         }
     }
 
+    /****/
     public void crearArchivoSolucion(int iSolucion, long ultimaMejora, long mejoraActual){
         //Creo el archivo
         try {
@@ -1608,6 +1639,7 @@ public class Solucion {
 
     }
 
+    /****/
     public void crearArchivoPlanificacion( String nombreArchivo) {
         //Creo el archivo
         try {

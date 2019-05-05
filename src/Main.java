@@ -1,8 +1,3 @@
-
-
-import com.sun.org.apache.bcel.internal.generic.IUSHR;
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
-
 import java.io.*;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -37,8 +32,8 @@ public class Main {
 
 
 
-        Main.resolverProductores();
-        //ESTE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Main.generarMejorSolucion();
+        //Main.resolverProductores();
+        Main.generarMejorSolucion();
         //Main.testCargarUsos();
         //Main.testInstancias();
         //Main.testFactibilizarProductividad();
@@ -49,7 +44,6 @@ public class Main {
 
     private static void resolverProductor() {
         int cantidadSoluciones = 0, datos;
-        String fileName;
         Solucion solucion;
         Scanner reader = new Scanner(System.in);
 
@@ -75,8 +69,6 @@ public class Main {
         reader.close();
     }
     private static void resolverProductores() {
-        int cantidadSoluciones = 0;
-        String fileName;
         Solucion solucion;
 
         for (int iProductores = 13; iProductores <=42 ; iProductores++) {
@@ -534,25 +526,8 @@ public class Main {
     }
 
     private static void generarArchvioDeDatos(int numProductor) {
-        int  datos, productor, pixel;
-        String fileName, estaciones;
+        int  productor, pixel;
         Scanner reader = new Scanner(System.in);
-
-        /*
-        System.out.print("1 para potreros, 2 para pixeles: ");
-        datos = reader.nextInt();
-
-        if (datos%2==0) {
-            fileName = "pixeles.in";
-            Constantes.cantPixeles = 18475;
-            Constantes.cantPotreros = 26168;
-        }else{
-            fileName = "potreros.in";
-            Constantes.cantPixeles = 792;
-            Constantes.cantPotreros = 1602;
-        }
-        */
-
 
         try {
             //Abro el archivo en moodo append
@@ -797,8 +772,6 @@ public class Main {
             }
             archivo.print(":=\n");
             for (int iPixel = 0; iPixel < Constantes.pixeles.length; iPixel++) {
-                int uso= Uso.usoYDuracion(Constantes.pixeles[iPixel].usoOriginal)[0];
-                int duracion= Uso.usoYDuracion(Constantes.pixeles[iPixel].usoOriginal)[1];
                 int usoBase=Uso.obtenerUsoBase(Constantes.pixeles[iPixel].usoOriginal);
                 System.out.println("UsoOriginal: \""+ Constantes.pixeles[iPixel].usoOriginal +"\"\t\t Equivale= "+usoBase );
                 archivo.print("\n"+Constantes.pixeles[iPixel].id+"\t");
@@ -830,6 +803,7 @@ public class Main {
         String fileName;
         Solucion solucion;
         Scanner reader = new Scanner(System.in);
+        System.out.println("GRASP V0.5: ");
         System.out.print("Generar Archivos de uso (1 si, 2 no): ");
         datos = reader.nextInt();
         if (datos%2!=0) {

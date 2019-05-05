@@ -9,10 +9,14 @@ public class Productor {
     float[] restriccionProduccionEstacion;
     List<Integer> pixelesDelProductor;
     float areaTotal;
+
+    /**Devuelve el minimo entre la minima cantidad de usos y la cantidad de pixeles del productor**/
     public int getMinCantUsos(){
         return min(this.pixelesDelProductor.size(), Constantes.minimaCantidadUsos);
     }
 
+    /**Constructor de Productor**/
+    //TODO: quitar restriccionProduccionAnual
     public Productor(int numeroProductor, float[] restriccionProduccionEstacion, float[] restriccionProduccionAnual, List<Integer> pixelesDelProductor) {
         this.numeroProductor = numeroProductor;
         this.restriccionProduccionEstacion = restriccionProduccionEstacion;
@@ -20,6 +24,7 @@ public class Productor {
         this.areaTotal=0;
     }
 
+    /**Carta tantos productores como COnstantes.cantProductores**/
     public static Productor[] cargarProductores(){
         float[] restriccionProductorE, restriccionProductorA;
         List<Integer> pixelesDelProductor;
@@ -30,7 +35,7 @@ public class Productor {
         pixelesDelProductor= new ArrayList<Integer>();
 
 
-        //PRUEBA SIN RESTRICCIONES PARA EL PRODUCTOR 1
+        //PRUEBA SIN RESTRICCIONES PARA EL PRODUCTOR 1 CON INDICE 0
         productores[0]= new Productor(0,restriccionProductorE, restriccionProductorA,pixelesDelProductor );
         for (int iProductores = 1; iProductores < Constantes.cantProductores; iProductores++) {
             //El productor cero tiene todos los pixeles pares
@@ -43,8 +48,7 @@ public class Productor {
         return productores;
     }
 
-
-
+    /**Carga dos Productores test**/
     public static Productor[] cargarProductoresTest(){
         Productor[] productores = new Productor[Constantes.cantProductores];
 
@@ -58,6 +62,8 @@ public class Productor {
         productores[1]= new Productor(0,restriccionProductorE1, restriccionProductorA1,Arrays.asList(1,3));
         return productores;
     }
+
+    /**Imprime los atributos de un Productor**/
     public void imprimirProductor(){
         System.out.printf("("+this.numeroProductor+", "+this.areaTotal+", {");
 
@@ -76,11 +82,15 @@ public class Productor {
         }
         System.out.println("})");
     }
+
+    /**Imprime todos los productores**/
     public static void imprimirProductores(){
         for (int i = 0; i < Constantes.productores.length; i++) {
             Constantes.productores[i].imprimirProductor();
         }
     }
+
+    /**Imprime los productores que han participado del problema**/
     public static void imprimirProductoresActivos(){
         for (int i = 0; i < Constantes.productoresActivos.size(); i++) {
             Constantes.productores[Constantes.productoresActivos.get(i)].imprimirProductor();
