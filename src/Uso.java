@@ -1,5 +1,3 @@
-
-
 import com.sun.istack.internal.NotNull;
 
 import java.io.*;
@@ -220,7 +218,7 @@ public class Uso {
     //TODO: Programacion Defensiva
     private static void cargarUsoDesdeArchivo(int indice, String nombreArchivo) {
         String nombre = "Sin nombre";
-        Integer numeroUso = 0, duracion = 0, primeraEstacion = 0;
+        int numeroUso = 0, duracion = 0, primeraEstacion = 0;
         Float fosforo = 0.F;
         float[] productividad = new float[0], fosforoEstacion = new float[0];
         List<Integer> siguientesUsos = new ArrayList<>();
@@ -256,7 +254,7 @@ public class Uso {
                             hayNombre = true;
                             break;
                         case "NumeroUso ":
-                            numeroUso = Integer.valueOf(campos[1].replaceAll("\\s+", ""));
+                            numeroUso = Integer.parseInt(campos[1].replaceAll("\\s+", ""));
                             hayNumeroUso = true;
                             break;
                         case "Duracion ":
@@ -447,35 +445,16 @@ public class Uso {
         //Cargo todos los datos
     }
 
-    //TODO: quitar el switch usando Div y concatenando el texto
     public static String getEstacionUso(int numero) {
-        switch (numero) {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-                return " (1° año)";
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-                return " (2° año)";
-            case 8:
-            case 9:
-            case 10:
-            case 11:
-                return " (3° año)";
-            case 12:
-            case 13:
-            case 14:
-            case 15:
-                return " (4° año)";
-            default:
-                return "No match";
+        if (numero >= 0) {
+            return "(" + ((numero / 4) + 1) + "° año)";
+        } else {
+            return "No match";
         }
     }
 
     //TODO: parametrizarlo, quizas con while, o haciendo hash map.
+    // Este hash map deberia ser unico, y deberia estar en un controladorUso o algo asi que sea singleton, y esta funcion estar ahi (si se usara).
     public static int indiceUso(String nombre) {
         switch (nombre) {
             case "Alfalfa":
