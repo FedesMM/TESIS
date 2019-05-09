@@ -471,7 +471,7 @@ public class Uso {
             case 15:
                 return " (4° año)";
             default:
-                return "No match";
+                return "No match in: getEstacionUso "+numero;
         }
     }
 
@@ -484,11 +484,15 @@ public class Uso {
                 return 2;
             case "TR+Cebadilla":
                 return 3;
+            case "TR+TB+Raigras":
             case "TR+TB+Raigrás":
+            case "TR+TB+RaigrÃ¡s":
                 return 4;
             case "Lotus Puro":
                 return 5;
+            case "Raigras+TB+L":
             case "Raigrás+TB+L":
+            case "RaigrÃ¡s+TB+L":
                 return 6;
             case "Achicoria":
                 return 7;
@@ -498,7 +502,9 @@ public class Uso {
                 return 9;
             case "Avena Pastoreo":
                 return 10;
+            case "Avena+Raigras Temp":
             case "Avena+Raigrás Temp":
+            case "Avena+RaigrÃ¡s Temp ":
                 return 11;
             case "Maiz":
                 return 12;
@@ -507,7 +513,7 @@ public class Uso {
             case "Rastrojo":
                 return 14;
             default:
-                System.out.println("no match");
+                System.out.println("No match in: indiceUso "+nombre);
                 return 0;
         }
     }
@@ -536,13 +542,17 @@ public class Uso {
             case "TR+Cebadilla ":
                 usoYDuracion[0] = 3;
                 break;
+            case "TR+TB+Raigras ":
             case "TR+TB+Raigrás ":
+            case "TR+TB+RaigrÃ¡s":
                 usoYDuracion[0] = 4;
                 break;
             case "Lotus Puro ":
                 usoYDuracion[0] = 5;
                 break;
+            case "Raigras+TB+L ":
             case "Raigrás+TB+L ":
+            case "RaigrÃ¡s+TB+L":
                 usoYDuracion[0] = 6;
                 break;
             case "Achicoria ":
@@ -557,7 +567,9 @@ public class Uso {
             case "Avena Pastoreo ":
                 usoYDuracion[0] = 10;
                 break;
+            case "Avena+Raigras Temp ":
             case "Avena+Raigrás Temp ":
+            case "Avena+RaigrÃ¡s Temp ":
                 usoYDuracion[0] = 11;
                 break;
             case "Maiz ":
@@ -570,7 +582,7 @@ public class Uso {
                 usoYDuracion[0] = 14;
                 break;
             default:
-                System.out.println("no match");
+                System.out.println("No match in: usoYDuracion "+campos[0]);
                 break;
         }
         if ((usoYDuracion[0] == 1) || (usoYDuracion[0] == 2)) {
@@ -707,13 +719,17 @@ public class Uso {
             case "TR+Cebadilla ":
                 usoBase = 300;
                 break;
+            case "TR+TB+Raigras ":
             case "TR+TB+Raigrás ":
+            case "TR+TB+RaigrÃ¡s":
                 usoBase = 400;
                 break;
             case "Lotus Puro ":
                 usoBase = 500;
                 break;
+            case "Raigras+TB+L ":
             case "Raigrás+TB+L ":
+            case "RaigrÃ¡s+TB+L":
                 usoBase = 600;
                 break;
             case "Achicoria ":
@@ -728,7 +744,9 @@ public class Uso {
             case "Avena Pastoreo ":
                 usoBase = 1000;
                 break;
+            case "Avena+Raigras Temp ":
             case "Avena+Raigrás Temp ":
+            case "Avena+RaigrÃ¡s Temp ":
                 usoBase = 1100;
                 break;
             case "Maiz ":
@@ -741,7 +759,7 @@ public class Uso {
                 usoBase = 1400;
                 break;
             default:
-                System.out.println("no match");
+                System.out.println("No match in: obtenerUsoBase "+campos[0]);
                 break;
         }
         if ((usoBase == 100) || (usoBase == 200)) {
