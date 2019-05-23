@@ -57,11 +57,7 @@ public class Main {
 
         solucion=Main.grasp(cantidadSoluciones, true, false);
 
-        solucion.crearArchivoMatriz();
-        solucion.crearArchivoMatrizNombreUsoExtendido();
-        solucion.crearArchivoCantidadUsos();
-        solucion.crearArchivoProductividadSobreAreaTotal();
-        solucion.crearArchivoFosforoSobreAreaTotal();
+        Main.crearArchivos(solucion, "FuncionObjetivo");
         System.out.println("Mejor solucion:");
         System.out.println("\tFosforo: " + solucion.fosforo);
         solucion.imprimirRestriccionProductividadMinimaEstacion();
@@ -803,7 +799,7 @@ public class Main {
         String fileName;
         Solucion solucion;
         Scanner reader = new Scanner(System.in);
-        System.out.println("GRASP V0.5: ");
+        System.out.println("GRASP V0.7: ");
         System.out.print("Generar Archivos de uso (1 si, 2 no): ");
         datos = reader.nextInt();
         if (datos%2!=0) {
@@ -838,17 +834,53 @@ public class Main {
         System.out.print("1 calcular solo Fosforo, 2 calcular fosforo segun la Distancia al rio: ");
         datos = reader.nextInt();
 
+        Constantes.mejorFosforo=new Solucion();
+        Constantes.mejorFosforo.fosforo=Float.MAX_VALUE;
+        Constantes.mejorCantIncumplimientoProductividad=new Solucion();
+        Constantes.mejorCantIncumplimientoProductividad.restriccionProductividadMinimaEstacion.cantIncumplimientos
+                =(int)Constantes.maximaCantidadIncumplimientoProductividadMinimaEstacion;
+        Constantes.mejorCantIncumplimientoUsos=new Solucion();
+        Constantes.mejorCantIncumplimientoUsos.restriccionUsosDistintos.cantIncumplimientos
+                =(int)Constantes.maximoIncumplimientoUsosDistintos;
+
+
         solucion=Main.grasp(cantidadSoluciones, true, datos%2==0);
-        solucion.crearArchivoMatriz();
-        solucion.crearArchivoMatrizNombreUsoExtendido();
-        solucion.crearArchivoCantidadUsos();
-        solucion.crearArchivoProductividadSobreAreaTotal();
-        solucion.crearArchivoFosforoSobreAreaTotal();
-        System.out.println("Mejor solucion:");
+        solucion.recalcular();
+        //Salida mejor solucion segun Funcion Objetivo
+        Main.crearArchivos(solucion,"FuncionObjetivo");
+        System.out.println("Mejor solucion FuncionObjetivo:");
         System.out.println("\tFosforo: " + solucion.fosforo);
         solucion.imprimirRestriccionProductividadMinimaEstacion();
         solucion.imprimirRestriccionUsosDistintos();
+        //Genero archivos del mejor Fosforo
+        Main.crearArchivos(Constantes.mejorFosforo, "Fosforo");
+        System.out.println("Mejor Fosforo:");
+        System.out.println("\tFosforo: " + Constantes.mejorFosforo.fosforo);
+        Constantes.mejorFosforo.imprimirRestriccionProductividadMinimaEstacion();
+        Constantes.mejorFosforo.imprimirRestriccionUsosDistintos();
+        //Genero archivos del mejor Productividad
+        Main.crearArchivos(Constantes.mejorCantIncumplimientoProductividad, "Productividad");
+        System.out.println("Mejor Productividad:");
+        System.out.println("\tFosforo: " + Constantes.mejorCantIncumplimientoProductividad.fosforo);
+        Constantes.mejorCantIncumplimientoProductividad.imprimirRestriccionProductividadMinimaEstacion();
+        Constantes.mejorCantIncumplimientoProductividad.imprimirRestriccionUsosDistintos();
+        //Genero archivos del mejor Usos
+        Main.crearArchivos(Constantes.mejorCantIncumplimientoUsos, "Usos");
+        System.out.println("Mejor Usos:");
+        System.out.println("\tFosforo: " + Constantes.mejorCantIncumplimientoUsos.fosforo);
+        Constantes.mejorCantIncumplimientoUsos.imprimirRestriccionProductividadMinimaEstacion();
+        Constantes.mejorCantIncumplimientoUsos.imprimirRestriccionUsosDistintos();
+
+
         reader.close();
+    }
+
+    private static void crearArchivos(Solucion solucion, String nombreSolucion) {
+        solucion.crearArchivoMatriz(nombreSolucion);
+        solucion.crearArchivoMatrizNombreUsoExtendido(nombreSolucion);
+        solucion.crearArchivoCantidadUsos(nombreSolucion);
+        solucion.crearArchivoProductividadSobreAreaTotal(nombreSolucion);
+        solucion.crearArchivoFosforoSobreAreaTotal(nombreSolucion);
     }
 
     private static void testFirstImprovement(boolean distanciaAlRio) {

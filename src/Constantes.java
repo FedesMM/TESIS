@@ -20,7 +20,8 @@ public class Constantes {
     public static int maximaCantidadUsos=6;
 
     //Maximo errores posibles para la funcion objetivo valor objetivo
-    public static float maximoIncumplimientoFosforo=2.23F*cantAnios;
+    public static float maximoFosforoAnual=2.23F;
+    public static float maximoIncumplimientoFosforo=maximoFosforoAnual*cantAnios;
     public static float maximoIncumplimientoProductividadMinimaEstacion= 2100;
     public static float maximaCantidadIncumplimientoProductividadMinimaEstacion=Constantes.cantEstaciones*Constantes.cantProductores;
     public static float maximoIncumplimientoUsosDistintos=Constantes.cantEstaciones*Constantes.cantProductores;
@@ -40,6 +41,12 @@ public class Constantes {
     public static int semilla=0;
     public static Random uniforme = new Random();
     public static List<Integer> productoresActivos= new ArrayList<Integer>();
+    public static Solucion mejorFosforo;
+    public static Solucion mejorCantIncumplimientoProductividad;
+    public static Solucion mejorCantIncumplimientoUsos;
+
+
+
 
     public static void cargarInstancia() {
         String nombreInstancia = "./Instancias/IntanciaPrueba.in";

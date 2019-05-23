@@ -15,6 +15,8 @@ public class Pixel {
     float superficie, distanciaAlRio;
     String usoOriginal;
 
+    //TODO: Seguir con comentarios desde aca
+
     //Esto no se va en la solucion
     // int[] decisiones = new int[Constantes.cantEstaciones]; //Se guarda el Uso*100+el numero de estacion de ese uso
 
